@@ -5,11 +5,11 @@ ALTER TABLE  ( ADD, RENAME COLUMN, ALTER COLUMN, DROP COLUMN)
 DROP TABLE   = to delete table
 
 
-1. *****************************************************    CREATE TABLE  ****************************
+1. CREATE TABLE:
 Syntax
 CREATE TABLE table_name( column_name datatype )
+For Example:
 
-Q1. Create a table named job_applied and add relevant column and data
 CREATE TABLE job_applied (
     job_id INT,
     application_sent_date DATE,
@@ -22,12 +22,12 @@ CREATE TABLE job_applied (
 
 Now you can check the table you created on Schemas > Public > Tables
 
-2.********************************************************    INSERT INTO  ****************************
+2. INSERT INTO:
 Syntax
 INSERT INTO table_name (column1_name, column2_name...)
 VALUES (value1, value2...)
+For Example:
 
-Q2. Fill the data into table
 INSERT INTO job_applied
     (job_id,
     application_sent_date ,
@@ -62,7 +62,8 @@ Now select the above INSERT INTO command and run using ctrl+E then data is fille
 you can watch the data  by running below command
 
 SELECT *
-FROM job_applied;
+FROM job_applied
+
 
 3. ************************************************************    ALTER TABLE  ****************************
 This command is used to add, delete or update the table content both column name and data
@@ -87,11 +88,11 @@ RENAME COLUMN contact TO  contact_name;
 Q5. Update the values into the 'contact_name'
 Ans.
 UPDATE job_applied
-SET contact = 'Diwash'
+SET contact = 'Ankit'
 WHERE job_id = 1;
 
 UPDATE job_applied
-SET contact = 'Dibya'
+SET contact = 'Ashwin'
 WHERE job_id = 2;
 
 UPDATE job_applied
@@ -110,3 +111,6 @@ DROP COLUMN contact_name;
 
 *********************************************************DELETE THE TABLE******************************************************
 DROP TABLE job_applied;
+
+
+
